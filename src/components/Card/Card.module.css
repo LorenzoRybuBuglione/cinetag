@@ -1,5 +1,4 @@
 .container {
-  padding: 0 0 1em 0;
   margin:1em 2em 0.5em 2em;
   width: 282px;
   background-color: var(--gray);
@@ -18,4 +17,17 @@
 
 .favorite {
   width: 25px;
+  height: 25px;
+  padding: 2em 1em;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--black);
+  text-align: left;
+}
+
+.footer {
+  text-align: left;
+  display: flex;
 }
