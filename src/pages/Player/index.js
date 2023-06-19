@@ -4,12 +4,17 @@ import Title from "components/Title";
 import videos from "json/db.json";
 
 import styles from "./Player.module.css";
+import NotFound from "pages/NotFound";
 
 function Player() {
   const params = useParams();
   const video = videos.find((video) => {
     return video.id === Number(params.id);
   });
+
+  if (!video) {
+    return <NotFound />;
+  }
 
   return (
     <>
