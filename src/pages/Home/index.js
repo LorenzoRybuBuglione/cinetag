@@ -1,11 +1,21 @@
+import { useEffect, useState } from "react";
 import Banner from "components/Banner";
 import Card from "components/Card";
 import Title from "components/Title";
-import videos from "json/db.json";
 
 import styles from "./Home.module.css";
 
 function Home() {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetch(
+      "https://my-json-server.typicode.com/LorenzoRybuBuglione/cinetag-api/videos"
+    )
+      .then((response) => response.json())
+      .then((data) => setVideos(data));
+  }, []);
+
   return (
     <>
       <Banner image={"home"} />
