@@ -10,11 +10,11 @@ function Card({ id, title, image }) {
 
   return (
     <div className={styles.container}>
-      <Link className={styles.link} to={`/${id}`}>
+      <Link className={styles.link} to={`/Player/${id}`}>
         <img src={image} alt={title} className={styles.image} />
       </Link>
       <div className={styles.footer}>
-        <Link className={styles.link} to={`/${id}`}>
+        <Link className={styles.link} to={`/Player/${id}`}>
           <h2>{title}</h2>
         </Link>
 
